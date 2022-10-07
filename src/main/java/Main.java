@@ -11,7 +11,6 @@ public class Main {
         System.out.println(person3.getName());
 
         System.out.println(String.format("%s is %d years old",person0.getName(), person0.getAge()));
-        System.out.println("helll");
 
     }
 }
