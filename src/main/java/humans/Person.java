@@ -1,24 +1,23 @@
+package humans;
+
+import java.time.Year;
 import java.util.Calendar;
 
 /**
  *
  */
 public class Person {
-    private String name;
-    private int age;
+    protected String name;
     private char sex;
     private int yearOfBirth;
 
-    public Person(String name, int age, char sex, int yearOfBirth) {
-        this(name); // invoking constructor from 18 line like Person person = new Person("Otto");
-        this.age = age;
+    public Person(String name, char sex, int yearOfBirth) {
+        this(name); // invoking constructor from 18 line like humans.Person person = new humans.Person("Otto");
         this.sex = sex;
         this.yearOfBirth = yearOfBirth;
     }
     public Person(String hisName) {
         name = hisName;
-    }
-    public Person(Person person) {
     }
 
     public void setName(String name) {
@@ -37,24 +36,25 @@ public class Person {
         return yearOfBirth;
     }
 
-    public void setYearOfBirth(int yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public int getAge() {
         return Calendar.getInstance().get(Calendar.YEAR) - yearOfBirth;
     }
 
+//    public int getAgeVersion2() {
+//        return Year.now().getValue() - yearOfBirth;
+//    }
     public String getName() {
-        if (this.sex == 'm') {
-            return "Mr. " + name;
-        } else if (this.sex == 'w') {
-            return "Ms. " + name;
-        }
         return name;
+    }
+//    public String getName() {
+//        if (this.sex == 'm') {
+//            return "Mr. " + name;
+//        } else if (this.sex == 'w') {
+//            return "Ms. " + name;
+//        }
+//        return name;
+//    }
+    public void printName() {
+        System.out.println(this.getName());
     }
 }
