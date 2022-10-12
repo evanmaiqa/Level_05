@@ -25,6 +25,7 @@ public class SalaryUtils {
         }
         return null;
     }
+
     public static void isEmployeeExist (Employee employee) {
         if (employee == null) {
             System.out.println("по его имени_ Employee not found");

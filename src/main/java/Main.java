@@ -5,12 +5,12 @@ import humans.SalaryUtils;
 public class Main {
     public static void main(String[] args) {
 
-        Employee employee_0 = new Employee("Ivan", 'm', 1980, 1000);
-        Employee employee_1 = new Employee("Anne", 'w', 1999, 1500);
-        Employee employee_2 = new Employee("Otto", 'm', 2010, 1000);
-        Employee employee_3 = new Employee("Wolfram", ' ', 1548, 1500);
-
-        Employee[] employees = {employee_0, employee_1, employee_2, employee_3};
+        Employee[] employees = new Employee[]{
+                new Employee("Ivan", 'm', 1980, 1000)
+                , new Employee("Anne", 'w', 1999, 1500)
+                , new Employee("Otto", 'm', 2010, 1000)
+                , new Employee("Wolfram", ' ', 1548, 1500)
+        };
 //        Employee[] employees = new Employee[0];
         if (SalaryUtils.isArrayEmptiness(employees)) {
             System.out.println("No employees...");
@@ -24,6 +24,10 @@ public class Main {
 
         // поиск сотрудника в массиве по его имени
         SalaryUtils.isEmployeeExist(SalaryUtils.findEmployee("Ivan", employees));
+        System.out.println("----------------------");
+        System.out.println(SalaryUtils.findEmployee("Otto", employees));
+        System.out.println(SalaryUtils.findEmployee("Ott", employees));
+        System.out.println("----------------------");
 
         // поиск сотрудника в массиве по вхождению указанной строки в его имени
         System.out.println("по вхождению указанной строки_ " + SalaryUtils.findEmployeeByString("Ivaa", employees));

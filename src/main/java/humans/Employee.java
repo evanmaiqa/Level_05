@@ -23,4 +23,13 @@ public class Employee extends Person {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                " name=" + getName() +
+                " sex=" + getSex() +
+                " age=" + getAge() +
+                " salary=" + salary +
+                '}';
+    }
 }
