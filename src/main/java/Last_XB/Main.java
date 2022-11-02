@@ -2,6 +2,9 @@ package Last_XB;
 import Last_XB.EmployeeExtra.Employee;
 
 public class Main {
+    static <T> void printA(T[] arr){
+
+    }
     public static void main(String[] args) {
 
         Employee employee = new Employee("Otto", 31, 'm', 10);
